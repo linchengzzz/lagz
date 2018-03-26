@@ -1,0 +1,209 @@
+header {
+  width: 100%;
+}
+header .top-adv {
+  display: block;
+  margin: auto;
+  background: url('../img/headerBg.JPG') no-repeat center;
+  height: 80px;
+  overflow: hidden;
+}
+header .lg_top {
+  background: #333;
+  line-height: 22px;
+  height: 22px;
+  font-size: 14px;
+}
+header .lg_top .inner {
+  width: 1308px;
+  margin: auto;
+  overflow: hidden;
+}
+header .lg_top .inner .app {
+  color: #ccc;
+  padding-left: 13px;
+  float: left;
+  background: url('../img/app_icon.png') no-repeat 1px;
+}
+header .lg_top .inner .app a {
+  display: inline;
+  padding-left: 0 3px 0 3px;
+}
+header .lg_top .inner .app :nth-child(1) {
+  color: #00b38a;
+}
+header .lg_top .inner .app :nth-child(1):hover {
+  color: #00da00;
+}
+header .lg_top .inner .app :nth-child(2) {
+  color: #c4c3c3;
+}
+header .lg_top .inner .app :nth-child(2):hover {
+  color: #fff;
+}
+header .lg_top .inner .login {
+  color: #c4c3c3;
+  float: right;
+}
+header .lg_top .inner .login a {
+  color: #c4c3c3;
+}
+header .lg_top .inner .login a:hover {
+  color: #fff;
+}
+header .nav {
+  background: #fafafa;
+  height: 54px;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #e5e5e5;
+}
+header .nav .inner {
+  width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+header .nav .inner .l_nav {
+  float: left;
+  width: 260px;
+  overflow: hidden;
+}
+header .nav .inner .l_nav h1 {
+  float: left;
+  width: 97px;
+  height: 34px;
+  margin: 10px;
+  background: url('../img/logo.png') no-repeat center;
+}
+header .nav .inner .l_nav .suggest {
+  float: left;
+  height: 44px;
+  padding-top: 10px;
+  padding-left: 12px;
+  font-size: 16px;
+  line-height: 44px;
+}
+header .nav .inner .l_nav .suggest strong {
+  font-weight: normal;
+}
+header .nav .inner .l_nav .suggest em {
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+  font-style: normal;
+}
+header .nav .inner .r_nav {
+  float: left;
+}
+header .nav .inner .r_nav li {
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+  line-height: px;
+}
+header .nav .inner .r_nav li a {
+  color: #999;
+  line-height: 53px;
+  font-size: 18px;
+}
+header .nav .inner .r_nav li:nth-child(1) {
+  border-bottom: 2px solid #00b38a;
+}
+header .nav .inner .r_nav li:nth-child(1) a {
+  color: #000;
+}
+section.main {
+  height: 1000px;
+}
+footer {
+  min-width: 1024px;
+  height: 67px;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+}
+footer .wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  clear: both;
+}
+footer .wrapper .footer-logo {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  z-index: 1;
+  display: block;
+  width: 198px;
+  height: 19px;
+  background: url('../img/footer_lagou.png') no-repeat center;
+}
+footer .wrapper .inner {
+  padding-top: 12px;
+  float: right;
+  height: 14px;
+  line-height: 14px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+footer .wrapper .inner a {
+  position: relative;
+  float: left;
+  margin-right: 14px;
+  color: #555;
+}
+footer .wrapper .inner a i {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  overflow: hidden;
+  vertical-align: text-top;
+  font-style: normal;
+  background: url('../img/new.png') no-repeat center;
+}
+footer .wrapper .inner a:nth-child(1) img {
+  width: 160px;
+  height: 160px;
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+footer .wrapper .inner a:nth-child(1):hover img {
+  animation: opa 1s 1 0s;
+  display: block;
+}
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer .wrapper .inner span {
+  margin-right: 0;
+  float: left;
+}
+footer .wrapper .inner span em {
+  display: inline-block;
+  font-size: 13px;
+  font-style: normal;
+  margin-left: 5px;
+}
+footer .wrapper .copy {
+  clear: both;
+  height: 12px;
+  margin: auto;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  color: #d5d5d5;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}

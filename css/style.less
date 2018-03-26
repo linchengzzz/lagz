@@ -1,0 +1,216 @@
+@text-color:#c4c3c3;
+header{
+    width: 100%;    
+    .top-adv{
+        display: block;
+        margin: auto;
+        background: url('../img/headerBg.JPG') no-repeat center;
+        height: 80px;
+        overflow: hidden;
+    }
+    .lg_top{
+        background: #333;
+        line-height: 22px;
+        height: 22px;
+        font-size:14px;
+        .inner{
+            width: 1308px;
+            margin: auto;
+            overflow: hidden;
+            .app{
+                a{
+                    display: inline;
+                    padding-left: 0 3px 0 3px;
+                }
+                color: #ccc;
+                :nth-child(1){
+                    color: #00b38a;
+                    &:hover{
+                        color:#00da00;
+                    }
+                }
+                :nth-child(2){
+                    color: @text-color;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+                padding-left:13px;
+                float: left;
+                background: url('../img/app_icon.png') no-repeat 1px;
+            }
+            .login{
+                color: @text-color;
+                float: right;
+                a{
+                    color:@text-color;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .nav{
+        background: #fafafa;
+        height: 54px;
+        border-top: 1px solid #d2d2d2;
+        border-bottom: 1px solid #e5e5e5;
+        .inner{
+            width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            .l_nav{
+                float: left;
+                width: 260px;
+                h1{
+                    float: left;
+                    width: 97px;
+                    height: 34px;
+                    margin: 10px;
+                    background: url('../img/logo.png') no-repeat center;
+                }
+                .suggest{
+                    float: left;
+                    height: 44px;
+                    padding-top: 10px;
+                    padding-left:12px;
+                    font-size: 16px;
+                    line-height: 44px;
+                    strong{
+                        font-weight: normal;
+                    }
+                    em{
+                        color: #999;
+                        font-size: 12px;
+                        cursor: pointer;
+                        font-style: normal;
+                    } 
+                }
+                overflow: hidden;
+            }
+            .r_nav{
+                float: left;
+                
+                li{
+                    display: inline-block;
+                    margin: 0 15px;
+                    position: relative;
+                    line-height: px;
+                    a{
+                        color:#999;
+                        line-height: 53px;
+                        font-size: 18px;
+                    }
+                    &:nth-child(1){
+                        a{
+                            color: #000;
+                        }
+                        border-bottom:2px solid #00b38a;
+                    }
+                }
+            }
+        }
+    }
+}
+section.main{
+    height: 1000px;
+}
+footer{
+    min-width: 1024px;
+    height: 67px;
+    border-top:1px solid #ebebeb;
+    position: relative;
+    .wrapper{
+        width: 1024px;
+        margin: 0 auto;
+        position: relative;
+        clear: both;
+        .footer-logo{
+            position: absolute;
+            left: 0;
+            top: 9px;
+            z-index: 1;
+            display: block;
+            width: 198px;
+            height: 19px;
+            background: url('../img/footer_lagou.png') no-repeat center;
+        }
+        .inner{
+            padding-top: 12px;
+            float: right;
+            height: 14px;
+            line-height: 14px;
+            white-space: nowrap;
+            font-size:14px;
+            a{  
+                position: relative;
+                float: left;
+                margin-right:14px;
+                color: #555;
+                i{
+                    position: relative;
+                    top:-1px;
+                    display: inline-block;
+                    width: 30px;
+                    height: 16px;
+                    overflow: hidden;
+                    vertical-align: text-top;
+                    font-style:normal; 
+                    background: url('../img/new.png') no-repeat center;
+                }
+                &:nth-child(1){
+                    img{
+                        width: 160px;
+                        height: 160px;
+                        display: none;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 0;
+                        z-index: 10;
+                        background: #fff;
+                        -webkit-box-shadow:0 2px 8px 0 rgba(0, 0, 0, .1);
+                        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+                        border-radius: 3px;
+                    }
+                    &:hover{
+                        img{
+                            animation: opa 1s 1 0s;;
+                            display: block;
+                        }
+                        @keyframes opa {
+                            0%{
+                                opacity: 0;
+                            }
+                            100%{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            span{
+                margin-right:0;
+                float: left; 
+                em{
+                    display: inline-block;
+                    font-size: 13px;
+                    font-style: normal;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .copy{
+            clear: both;
+            height: 12px;
+            margin: auto;
+            padding-top: 13px;
+            padding-bottom: 14px;
+            color: #d5d5d5;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+
+        }
+    }
+}
