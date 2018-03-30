@@ -103,9 +103,16 @@ header {
                     }
                     &:nth-child(1) {
                         a {
-                            color: #000;
+                            color: #333;
                         }
                         border-bottom:2px solid #00b38a;
+                    }
+                    &:hover{
+                        a{
+                        color: #333;
+                            
+                        }
+                        border-bottom: 2px solid #00b38a;
                     }
                 }
             }
@@ -114,6 +121,12 @@ header {
 }
 
 section.main {
+    .wordCut() {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        word-wrap: normal;
+    }
     padding-bottom: 39px;
     .main-header {
         position: relative;
@@ -208,7 +221,7 @@ section.main {
                             border-bottom-left-radius: 2px;
                             z-index: 20;
                         }
-                        &:after{
+                        &:after {
                             content: '';
                             position: absolute;
                             top: 0;
@@ -218,7 +231,7 @@ section.main {
                             background: #fff;
                             z-index: 100;
                         }
-                        .navs-sub{
+                        .navs-sub {
                             display: block;
                         }
                     }
@@ -235,7 +248,7 @@ section.main {
                                 display: inline-block;
                                 padding-left: 15px;
                                 font-size: 18px;
-                                font-weight: 500;
+                                font-weight: normal;
                             }
                             a {
                                 margin: 0 5px 5px 0;
@@ -318,29 +331,540 @@ section.main {
         .banner {
             position: relative;
             margin-left: 360px;
-            margin-top: 20px;
-            height: 346px;
+            margin-top: 40px;
+            // height: 346px;
             overflow: hidden;
-            background: #f2f5f4;
+            // background: #f2f5f4;
+            .swiper-container {
+                margin-top:20px;
+                height: 346px;
+                cursor: pointer;
+                .swiper-button-prev,.swiper-button-next{
+                    display: none;
+                }
+                &:hover{
+                    .swiper-button-prev,.swiper-button-next{
+                        display: block;
+                    }
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                } 
+            }  
         }
-        .job_tab{
+        .job_tab {
             margin-top: 52px;
             margin-bottom: 14px;
             border-bottom: 1px solid #e8e8e8;
-            li{
+            li {
                 position: relative;
                 cursor: pointer;
                 display: inline-block;
                 padding: 14px 0;
                 margin-right: 58px;
                 font-size: 16px;
-                &.current{
-                    border-bottom:2px solid #333;
+                &.current {
+                    border-bottom: 2px solid #333;
                     background: #fff;
                     color: #333;
                 }
             }
         }
+        .job_list {
+            .list-ul {
+                width: 1216px;
+                display: none;
+                &.disp{
+                    display: block;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    box-sizing: border-box;
+                    position: relative;
+                    width: 389px;
+                    height: 200px;
+                    margin: 16px 16px 0 0;
+                    padding: 20px 18px 0;
+                    border: 1px solid #eaeeed;
+                    background: #fff;
+                    &:hover {
+                        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .09);
+                    }
+                    .top {
+                        .top-l {
+                            &:after {
+                                content: '';
+                                display: block;
+                                clear: both;
+                            }
+                            .position-name {
+                                float: left;
+                                height: 22px;
+                                max-width: 290px;
+                                vertical-align: middle;
+                                h2 {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    font-weight: 400;
+                                    a {
+                                        .wordCut();
+                                        max-width: 125px;
+                                        float: left;
+                                        color: #555;
+                                        background: transparent;
+                                        &:hover {
+                                            color: #00b38a;
+                                        }
+                                    }
+                                }
+                                span {
+                                    color: #999;
+                                    font-size: 14px;
+                                }
+                                .chat-me {
+                                    display: inline-block;
+                                    position: relative;
+                                    top: 3px;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url('../img/icon_chat2.png') no-repeat center;
+                                    background-size: 16px 16px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        .chat-box {
+                                            display: block;
+                                        }
+                                    }
+                                    .chat-box {
+                                        display: none;
+                                        position: absolute;
+                                        top: -30px;
+                                        left: 40px;
+                                        width: 312px;
+                                        height: 132px;
+                                        padding: 16px;
+                                        background: #fff;
+                                        z-index: 1;
+                                        border-radius: 3px;
+                                        border: 1px solid #dce4e6;
+                                        box-shadow: 1px 1px 2px #f2f2f2;
+                                        user-select: none;
+                                        .arrow {
+                                            position: absolute;
+                                            left: -8px;
+                                            top: 33px;
+                                            width: 14px;
+                                            height: 14px;
+                                            margin: 0 !important;
+                                            background-color: #fff;
+                                            border-left: 1px solid #dce4e6;
+                                            border-top: 1px solid #dce4e6;
+                                            transform: rotate(-45deg);
+                                        }
+                                        .chat-main {
+                                            &:after {
+                                                content: '';
+                                                display: block;
+                                                clear: both;
+                                            }
+                                            dt {
+                                                width: 116px;
+                                                height: 116px;
+                                                float: right;
+                                                border: 1px solid #eee;
+                                                margin-top: 6px;
+                                                padding: 0;
+                                            }
+                                            dd {
+                                                min-height: auto;
+                                                clear: none;
+                                                padding: 0;
+                                                margin: 0;
+                                                .chat-head {
+                                                    &:after {
+                                                        content: '';
+                                                        display: block;
+                                                        clear: both;
+                                                    }
+                                                    dt {
+                                                        width: 62px;
+                                                        height: auto;
+                                                        float: left;
+                                                        margin: 0 14px 10px 0;
+                                                        background: 0 0;
+                                                        border: 0;
+                                                        padding: 0;
+                                                        color: #fff;
+                                                        background: #ff8590;
+                                                        width: 62px;
+                                                        height: 62px;
+                                                        border-radius: 50%;
+                                                        overflow: hidden;
+                                                        font-size: 22px;
+                                                        font-weight: 700;
+                                                        line-height: 62px;
+                                                        text-align: center;
+                                                        img {}
+                                                    }
+                                                }
+                                                dd {
+                                                    min-height: 64px;
+                                                    color: #333;
+                                                    line-height: 22px;
+                                                    .hr-name {
+                                                        margin: 0;
+                                                        font-size: 18px;
+                                                        line-height: 30px;
+                                                        color: #333;
+                                                        overflow: hidden;
+                                                        text-overflow: ellipsis;
+                                                        white-space: nowrap;
+                                                        word-wrap: normal;
+                                                    }
+                                                    .hr-position {
+                                                        font-size: 14px;
+                                                        line-height: 24px;
+                                                        color: #666;
+                                                        overflow: hidden;
+                                                        text-overflow: ellipsis;
+                                                        white-space: nowrap;
+                                                        word-wrap: normal;
+                                                    }
+                                                }
+                                                .tips {
+                                                    clear: left;
+                                                    font-size: 14px;
+                                                    min-height: 64px;
+                                                    color: #333;
+                                                    line-height: 22px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .salary {
+                            font-size: 16px;
+                            color: #fa6041;
+                            float: right;
+                        }
+                    }
+                    .top-main {
+                        height: 30px;
+                        line-height: 30px;
+                        color: #777;
+                        .wordCut();
+                        span {
+                            line-height: 30px;
+                            font-size: 14px;
+                        }
+                    }
+                    .lable {
+                        margin-top: 5px;
+                        .lab-btm {
+                            margin-right: 20px;
+                            height: 30px;
+                            line-height: 30px;
+                            overflow: hidden;
+                            span {
+                                .wordCut();
+                                display: inline-block;
+                                width: 61px;
+                                height: 26px;
+                                padding: 0 5px;
+                                font-size: 12px;
+                                line-height: 26px;
+                                color: #999;
+                                border: 1px solid #f0f0f0;
+                                border-radius: 3px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .btm {
+                    margin-top: 18px;
+                    padding-top: 18px;
+                    border-top: 1px dashed #e0e0e0;
+                    &:after {
+                        content: '';
+                        clear: both;
+                        display: block;
+                    }
+                    >a {
+                        float: left;
+                        color: #555;
+                        img {
+                            border: 0;
+                            vertical-align: top;
+                            display: inline-block;
+                        }
+                    }
+                    .btm-right {
+                        font-size: 14px;
+                        margin-left: 54px;
+                        .name {
+                            height: 20px;
+                            line-height: 20px;
+                            color: #333;
+                            .wordCut();
+                            a {
+                                color: #555;
+                                &:hover {
+                                    color: #00b38a;
+                                }
+                            }
+                        }
+                        .industry {
+                            height: 20px;
+                            line-height: 20px;
+                            color: #999;
+                            .wordCut();
+                            span {
+                                line-height: 20px;
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .list-more {
+                display: block;
+                width: 387px;
+                height: 42px;
+                line-height: 42px;
+                margin: 16px auto 0;
+                background: #fff;
+                border: 1px solid #00b38a;
+                font-size: 16px;
+                color: #00b38a;
+                text-align: center;
+                transition: background .3s, color .1s;
+                &:hover {
+                    background: #00b38a;
+                    color: #fff;
+                }
+            }
+        }
+        .module {
+            margin-top: 52px;
+            margin-bottom: 14px;
+            border-bottom: 1px solid #e8e8e8;
+            li {
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+                padding: 14px 0;
+                margin-right: 58px;
+                font-size: 16px;
+                &.current {
+                    border-bottom: 2px solid #333;
+                    background: #fff;
+                    color: #333;
+                }
+            }
+        }
+        .companys {
+            .list-ul {
+                width: 1216px;
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    box-sizing: border-box;
+                    position: relative;
+                    width: 288px;
+                    height: 270px;
+                    margin: 16px 16px 0 0;
+                    border: 1px solid #eaeeed;
+                    background: #fff;
+                    &:hover {
+                        box-shadow: 0 0 4px 2px rgba(0, 0, 0, .09);
+                    }
+                    .top {
+                        margin: 0 13px;
+                        padding: 20px 0 14px;
+                        text-align: center;
+                        border-bottom: 1px dashed #e0e0e0;
+                        p {
+                            line-height: 22px;
+                        }
+                        .company-name {
+                            height: 22px;
+                            margin-top: 13px;
+                            font-size: 16px;
+                            color: #333;
+                            .wordCut();
+                            a {
+                                color: #555;
+                                &::hover {
+                                    color: #00b38a;
+                                }
+                            }
+                        }
+                        .indus {
+                            height: 22px;
+                            margin-top: 3px;
+                            color: #999;
+                            font-size: 16px;
+                            .wordCut();
+                        }
+                        .adv {
+                            margin-top: 5px;
+                            font-size: 16px;
+                            color: #555;
+                            .wordCut();
+                        }
+                    }
+                    .btm {
+                        &:after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                        .bottom-1,
+                        .bottom-2,
+                        .bottom-3 {
+                            width: 90px;
+                            position: relative;
+                            display: block;
+                            margin-top: 17px;
+                            text-align: center;
+                            float: left;
+                            &:hover {
+                                color: #00b38a;
+                            }
+                            .green {
+                                line-height: 1;
+                                color: #00b38a;
+                            }
+                            .gray {
+                                margin-top: 4px;
+                                font-size: 12px;
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+            }
+            .list-more {
+                display: block;
+                width: 387px;
+                height: 42px;
+                line-height: 42px;
+                margin: 16px auto 0;
+                background: #fff;
+                border: 1px solid #00b38a;
+                font-size: 16px;
+                color: #00b38a;
+                text-align: center;
+                transition: background .3s, color .1s;
+                &:hover {
+                    background: #00b38a;
+                    color: #fff;
+                }
+            }
+        }
+        .linkbox {
+            position: relative;
+            margin-top: 52px;
+            overflow: hidden;
+            &.show {
+                height: 98px;
+            }
+            dl {
+                position: relative;
+                dt {
+                    border-bottom: 1px solid #e8e8e8;
+                    color: #333;
+                    margin-bottom: 21px;
+                    span {
+                        position: relative;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 14px 0;
+                        margin-right: 58px;
+                        font-size: 16px;
+                        &.current {
+                            border-bottom: 2px solid #333;
+                            background: #fff;
+                            color: #333;
+                        }
+                    }
+                }
+                .links {
+                    position: relative;
+                    width: 1120px;
+                    color: #555;
+                    font-size: 14px;
+                    overflow: hidden;
+                    a {
+                        white-space: nowrap;
+                        float: left;
+                        height: 15px;
+                        padding: 8px 18px 8px 0;
+                        line-height: 15px;
+                        color: #555;
+                        font-size: 14px;
+                        text-decoration: none;
+                        &.more {
+                            text-decoration: underline;
+                        }
+                        &:hover {
+                            color: #00b38a;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .exp {
+                    height: 20px;
+                    position: absolute;
+                    right: 3px;
+                    top: 78px;
+                    cursor: pointer;
+                    color: #999;
+                    i {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        margin-left: 5px;
+                        background: url('../img/arrow_down.png') no-repeat;
+                        background-position: 0 5px;
+                        background-size: 12px 6px;
+                        &.i-up {
+                            transform: rotate(180deg);
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.backtop {
+    position: fixed;
+    display: none;
+    background: url('../img/backtop.png') no-repeat left top;
+    background-size: auto;
+    width: 28px;
+    height: 46px;
+    bottom: 88px;
+    right: 40px;
+    cursor: pointer;
+    &:hover {
+        background-position: right top;
     }
 }
 
