@@ -8,17 +8,44 @@ function backtopDisplay() {
         $backtop.hide();
     }
 }
+
+//切换城市 显示/隐藏
+
+$('.suggest em').click(function () {
+    $('.cboxOver').show();
+    $('.colorBox').show();
+});
+$('.cboxOver').click(function () {
+    $(this).hide();
+    $('.colorBox').hide();
+});
+$('.cboxClose').click(function () {
+    $('.cboxOver').hide();
+    $('.colorBox').hide();
+});
+
+//切换城市
+$('.changeCityBox li a').click(function () {
+    let data = $(this).html();
+    $(this).html($('.checkTips a').html());
+    $('.checkTips a').html(data);
+    $('.suggest strong').html(data);
+    $('.cboxOver').hide();
+    $('.colorBox').hide();
+})
+
 //seach点击显示隐藏
 $('.seachInput').focus(function () {
-    $(this).css('border','1px solid #00b38a');
+    $(this).css('border', '1px solid #00b38a');
     $('.pos-guss').show();
-    
+
 })
 $('.guss-wrapper li').click(function () {
     $('.seachInput').val($(this).html());
-    $(this).css('border','1px solid #e8e8e8');
+    $(this).css('border', '1px solid #e8e8e8');
     $('.pos-guss').hide();
 })
+
 //swiper 轮播图
 let mySwiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
@@ -42,11 +69,13 @@ let mySwiper = new Swiper('.swiper-container', {
     },
 
 })
+
 //job 点击切换
 $('.job_tab').children('li').click(function () {
     let index = $(this).index();
     $(this).addClass('current').siblings().removeClass('current').parent().next().children('ul').eq(index).addClass('disp').siblings().removeClass('disp');
 })
+
 //友情链接展开/收起
 $('.exp').click(function () {
     if ($(this).text() === '收起') {
@@ -57,6 +86,7 @@ $('.exp').click(function () {
         $('.linkbox').removeClass('show');
     }
 })
+
 //backtop 加载
 $(window).load(() => {
     backtopDisplay();

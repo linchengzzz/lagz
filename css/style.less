@@ -107,12 +107,189 @@ header {
                         }
                         border-bottom:2px solid #00b38a;
                     }
-                    &:hover{
-                        a{
-                        color: #333;
-                            
+                    &:hover {
+                        a {
+                            color: #333;
                         }
                         border-bottom: 2px solid #00b38a;
+                    }
+                }
+            }
+        }
+    }
+    .cboxOver {
+        display: none;
+        opacity: 0.9;
+        cursor: pointer;
+        visibility: visible;
+        background: url('../img/overlay.png') repeat;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .colorBox {
+        display: none;
+        visibility: visible;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        width: 528px;
+        height: 506px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        z-index: 999;
+        overflow: hidden;
+        .colorWrapper {
+            height: 506px;
+            width: 528px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            overflow: hidden;
+            .color() {
+                background: #3a3a3a;
+                opacity: .5;
+                float: left;
+            }
+            div {
+                .cboxTopLeft,
+                .cboxTopRight,
+                .cboxBottomLeft,
+                .cboxBottomRight {
+                    width: 13px;
+                    height: 13px;
+                    .color();
+                }
+                .cboxTopCenter,
+                .cboxBottomCenter {
+                    width: 502px;
+                    height: 13px;
+                    .color();
+                }
+                .cboxMiddleLeft,
+                .cboxMiddleRight {
+                    float: left;
+                    height: 480px;
+                    width: 13px;
+                    background: #3a3a3a;
+                    opacity: .5;
+                }
+                .cboxContent {
+                    float: left;
+                    width: 502px;
+                    height: 480px;
+                    overflow: hidden;
+                    background: #fff;
+                    -webkit-box-sizing: content-box;
+                    box-sizing: content-box;
+                    position: relative;
+                    .cboxLoadedContent {
+                        width: 502px;
+                        overflow: hidden;
+                        height: 436px;
+                        margin-top: 44px;
+                        .changeCityBox {
+                            width: 422px;
+                            padding: 30px 40px;
+                            font: 14px/22px "Hiragino Sans GB", "Microsoft Yahei", SimSun, Arial;
+                            color: #555;
+                            overflow: hidden;
+                            .tab {
+                                display: inline-block;
+                                margin: 0 12px;
+                                font-size: 16px;
+                                width: 100px;
+                                height: 50px;
+                                color: #999;
+                                text-align: center;
+                                line-height: 50px;
+                                border: 1px solid #dce4e6;
+                                border-radius: 1px;
+                            }
+                            .focus {
+                                border: 2px solid #00b38a;
+                                color: #555;
+                                width: 98px;
+                                height: 48px;
+                                line-height: 48px;
+                            }
+                            .changeCity_header {
+                                border-bottom: 1px dotted #e5e5d5;
+                                strong {
+                                    font-size: 20px;
+                                    margin-bottom: 10px;
+                                    color: #333;
+                                    font-weight: 400;
+                                }
+                                .tips {
+                                    font-size: 16px;
+                                    color: #555;
+                                    line-height: 42px;
+                                    margin: 0 0 25px;
+                                }
+                            }
+                            .checkTips {
+                                margin: 26px 0 14px;
+                            }
+                            ul {
+                                &:after {
+                                    content: '';
+                                    display: block;
+                                    clear: both;
+                                }
+                                li {
+                                    &:hover a {
+                                        .focus();
+                                    }
+                                    float: left;
+                                    width: 102px;
+                                    margin: 11px 12px
+                                }
+                            }
+                            .changeCity_footer {
+                                color: #777;
+                                font-size: 14px;
+                                margin: 14px 0 0;
+                            }
+                        }
+                    }
+                    .cboxTitle {
+                        float: left;
+                        display: block;
+                        font-size: 18px;
+                        color: #fff;
+                        background: #00b38a;
+                        height: 44px;
+                        width: 100%;
+                        text-indent: 1em;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        line-height: 44px;
+                    }
+                    .cboxClose{
+                        border: 0;
+                        padding: 0;
+                        margin: 0;
+                        overflow: visible;
+                        width: auto;
+                        background: 0;
+                        position: absolute;
+                        top: 12px;
+                        right: 12px;
+                        background: url('../img/controls.png') no-repeat;
+                        width: 19px;
+                        height: 19px;
+                        text-indent: -9999px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -170,13 +347,13 @@ section.main {
                     }
                 }
             }
-            .pos-guss{
+            .pos-guss {
                 display: none;
                 position: relative;
                 width: 938px;
                 height: 0;
                 margin: auto;
-                .guss-wrapper{
+                .guss-wrapper {
                     position: absolute;
                     z-index: 100;
                     width: 795px;
@@ -184,19 +361,19 @@ section.main {
                     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .08);
                     border-radius: 3px;
                     font-size: 14px;
-                    span{
+                    span {
                         display: block;
                         color: #999;
                         padding: 5px 17px;
                     }
-                    ul{
-                        li{
+                    ul {
+                        li {
                             color: #555;
                             padding: 8px 17px;
                             cursor: pointer;
-                            &:hover{
+                            &:hover {
                                 background: #00b38a;
-                                color:#fcfcfc;
+                                color: #fcfcfc;
                             }
                         }
                     }
@@ -363,27 +540,27 @@ section.main {
         .banner {
             position: relative;
             margin-left: 360px;
-            margin-top: 40px;
-            // height: 346px;
-            overflow: hidden;
-            // background: #f2f5f4;
+            margin-top: 40px; // height: 346px;
+            overflow: hidden; // background: #f2f5f4;
             .swiper-container {
-                margin-top:20px;
+                margin-top: 20px;
                 height: 346px;
                 cursor: pointer;
-                .swiper-button-prev,.swiper-button-next{
+                .swiper-button-prev,
+                .swiper-button-next {
                     display: none;
                 }
-                &:hover{
-                    .swiper-button-prev,.swiper-button-next{
+                &:hover {
+                    .swiper-button-prev,
+                    .swiper-button-next {
                         display: block;
                     }
                 }
-                img{
+                img {
                     height: 100%;
                     width: 100%;
-                } 
-            }  
+                }
+            }
         }
         .job_tab {
             margin-top: 52px;
@@ -407,7 +584,7 @@ section.main {
             .list-ul {
                 width: 1216px;
                 display: none;
-                &.disp{
+                &.disp {
                     display: block;
                 }
                 &:after {
@@ -667,7 +844,6 @@ section.main {
                     }
                 }
             }
-            
             .list-more {
                 display: block;
                 width: 387px;

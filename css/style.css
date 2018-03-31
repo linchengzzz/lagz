@@ -117,6 +117,183 @@ header .nav .inner .r_nav li:hover {
 header .nav .inner .r_nav li:hover a {
   color: #333;
 }
+header .cboxOver {
+  display: none;
+  opacity: 0.9;
+  cursor: pointer;
+  visibility: visible;
+  background: url('../img/overlay.png') repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+header .colorBox {
+  display: none;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  width: 528px;
+  height: 506px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 999;
+  overflow: hidden;
+}
+header .colorBox .colorWrapper {
+  height: 506px;
+  width: 528px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+header .colorBox .colorWrapper div .cboxTopLeft,
+header .colorBox .colorWrapper div .cboxTopRight,
+header .colorBox .colorWrapper div .cboxBottomLeft,
+header .colorBox .colorWrapper div .cboxBottomRight {
+  width: 13px;
+  height: 13px;
+  background: #3a3a3a;
+  opacity: .5;
+  float: left;
+}
+header .colorBox .colorWrapper div .cboxTopCenter,
+header .colorBox .colorWrapper div .cboxBottomCenter {
+  width: 502px;
+  height: 13px;
+  background: #3a3a3a;
+  opacity: .5;
+  float: left;
+}
+header .colorBox .colorWrapper div .cboxMiddleLeft,
+header .colorBox .colorWrapper div .cboxMiddleRight {
+  float: left;
+  height: 480px;
+  width: 13px;
+  background: #3a3a3a;
+  opacity: .5;
+}
+header .colorBox .colorWrapper div .cboxContent {
+  float: left;
+  width: 502px;
+  height: 480px;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent {
+  width: 502px;
+  overflow: hidden;
+  height: 436px;
+  margin-top: 44px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox {
+  width: 422px;
+  padding: 30px 40px;
+  font: 14px/22px "Hiragino Sans GB", "Microsoft Yahei", SimSun, Arial;
+  color: #555;
+  overflow: hidden;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .tab {
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  color: #999;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #dce4e6;
+  border-radius: 1px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .focus {
+  border: 2px solid #00b38a;
+  color: #555;
+  width: 98px;
+  height: 48px;
+  line-height: 48px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .changeCity_header {
+  border-bottom: 1px dotted #e5e5d5;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .changeCity_header strong {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 400;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .changeCity_header .tips {
+  font-size: 16px;
+  color: #555;
+  line-height: 42px;
+  margin: 0 0 25px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .checkTips {
+  margin: 26px 0 14px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox ul li {
+  float: left;
+  width: 102px;
+  margin: 11px 12px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox ul li:hover a {
+  border: 2px solid #00b38a;
+  color: #555;
+  width: 98px;
+  height: 48px;
+  line-height: 48px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxLoadedContent .changeCityBox .changeCity_footer {
+  color: #777;
+  font-size: 14px;
+  margin: 14px 0 0;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxTitle {
+  float: left;
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  background: #00b38a;
+  height: 44px;
+  width: 100%;
+  text-indent: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 44px;
+}
+header .colorBox .colorWrapper div .cboxContent .cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+  background: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url('../img/controls.png') no-repeat;
+  width: 19px;
+  height: 19px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
 section.main {
   padding-bottom: 39px;
 }
