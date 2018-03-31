@@ -163,6 +163,36 @@ section.main .main-header .seach-wrapper .seach-box .seachSubmit:hover {
   cursor: pointer;
   background: #02aa96;
 }
+section.main .main-header .seach-wrapper .pos-guss {
+  display: none;
+  position: relative;
+  width: 938px;
+  height: 0;
+  margin: auto;
+}
+section.main .main-header .seach-wrapper .pos-guss .guss-wrapper {
+  position: absolute;
+  z-index: 100;
+  width: 795px;
+  background: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  font-size: 14px;
+}
+section.main .main-header .seach-wrapper .pos-guss .guss-wrapper span {
+  display: block;
+  color: #999;
+  padding: 5px 17px;
+}
+section.main .main-header .seach-wrapper .pos-guss .guss-wrapper ul li {
+  color: #555;
+  padding: 8px 17px;
+  cursor: pointer;
+}
+section.main .main-header .seach-wrapper .pos-guss .guss-wrapper ul li:hover {
+  background: #00b38a;
+  color: #fcfcfc;
+}
 section.main .main-header .seach-wrapper .hot-seach {
   width: 938px;
   height: 22px;

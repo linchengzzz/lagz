@@ -8,21 +8,32 @@ function backtopDisplay() {
         $backtop.hide();
     }
 }
+//seach点击显示隐藏
+$('.seachInput').focus(function () {
+    $(this).css('border','1px solid #00b38a');
+    $('.pos-guss').show();
+    
+})
+$('.guss-wrapper li').click(function () {
+    $('.seachInput').val($(this).html());
+    $(this).css('border','1px solid #e8e8e8');
+    $('.pos-guss').hide();
+})
 //swiper 轮播图
 let mySwiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
     loop: true,
-    autoplay:true,
+    autoplay: true,
     // 如果需要分页器
     pagination: {
         el: '.swiper-pagination',
-        clickable:true,
+        clickable: true,
     },
-    on:{
-        click:function () {
+    on: {
+        click: function () {
             this.autoplay.start();
             // console.log(this);
-          }
+        }
     },
     // 如果需要前进后退按钮
     navigation: {
