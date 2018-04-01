@@ -45,7 +45,11 @@ $('.guss-wrapper li').click(function () {
     $(this).css('border', '1px solid #e8e8e8');
     $('.pos-guss').hide();
 })
+$('.seachInput').blur(function () {
+    $(this).css('border', '1px solid #e8e8e8');
+    $('.pos-guss').hide();
 
+})
 //swiper 轮播图
 let mySwiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
@@ -59,7 +63,6 @@ let mySwiper = new Swiper('.swiper-container', {
     on: {
         click: function () {
             this.autoplay.start();
-            // console.log(this);
         }
     },
     // 如果需要前进后退按钮
