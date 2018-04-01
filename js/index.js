@@ -35,21 +35,19 @@ $('.changeCityBox li a').click(function () {
 })
 
 //seach点击显示隐藏
-$('.seachInput').focus(function () {
-    $(this).css('border', '1px solid #00b38a');
-    $('.pos-guss').show();
+$(document).click(function (e) {
+    if (e.target == $('.seachInput')[0]) {
+        $('.seachInput').css('border', '1px solid #00b38a');
+        $('.pos-guss').show();
+    } else {
+        if (e.target.parentElement === $('.guss-wrapper ul')[0]) {
+            $('.seachInput').val($(e.target).html());
+        }
+        $('.seachInput').css('border', '1px solid #e8e8e8');
+        $('.pos-guss').hide();
+    }
+})
 
-})
-$('.guss-wrapper li').click(function () {
-    $('.seachInput').val($(this).html());
-    $(this).css('border', '1px solid #e8e8e8');
-    $('.pos-guss').hide();
-})
-$('.seachInput').blur(function () {
-    $(this).css('border', '1px solid #e8e8e8');
-    $('.pos-guss').hide();
-
-})
 //swiper 轮播图
 let mySwiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
